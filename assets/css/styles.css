@@ -10,3 +10,22 @@
     height: 5vh;
     
 }
+
+.flexbox {
+    display: inline-block;
+    margin-left: 1vh;
+}
+
+#cityName {
+    width: 25vh;
+    height: 3vh;
+    text-align: center;
+    margin-top: 1vh;
+}
+#searchBtn {
+    width: 26vh;
+    height: 3vh;
+    text-align: center;
+    background-color: rgb(255, 232, 127);
+    color: black;
+}
