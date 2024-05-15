@@ -18,6 +18,18 @@ searchBtn.addEventListener('click', function(event){
     localStorage.setItem('city', JSON.stringify(searchHistory));
 })
 
+// Create a variable to act as the container for searched cities
+const cityContainer = document.querySelector('.cities');
+
+// query data from the local storage
+const cityData = localStorage.getItem('city');
+if(!cityData) {
+    cityData = [];
+}
+
+//Convert sotred data to an easier datatype
+const cityArray = JSON.parse(cityData)
+
 // The city variable will have to be written by the user. We can retrieve it from local storage.
 let city;
 
