@@ -21,6 +21,7 @@
     height: 3vh;
     text-align: center;
     margin-top: 1vh;
+    border-radius: 15px;
 }
 #searchBtn {
     width: 26vh;
@@ -28,4 +29,5 @@
     text-align: center;
     background-color: rgb(255, 232, 127);
     color: black;
+    border-radius: 25px;
 }
