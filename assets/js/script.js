@@ -16,6 +16,7 @@ searchBtn.addEventListener('click', function(event){
     }
     searchHistory.push(userSearch)
     localStorage.setItem('city', JSON.stringify(searchHistory));
+    
 })
 
 // Create a variable to act as the container for searched cities
@@ -43,11 +44,21 @@ for (let i = 0; i < cityArray.length; i++) {
     wrapper.appendChild(cityN);
     //Add new wrapper to the DOM
     cityContainer.append(wrapper);
+    
 
 }
 // The city variable will have to be written by the user. We can retrieve it from local storage.
-let city;
+let city = cityData
 
 const queryUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
 
-fetch(queryUrl)
+fetch(queryUrl ,{
+    method: 'GET',
+
+})
+.then(function (response) {
+    return response.json();
+})
+.then(function(data) {
+    console.log(data);
+});
