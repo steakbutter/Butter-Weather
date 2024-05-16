@@ -33,7 +33,7 @@ const cityArray = JSON.parse(cityData)
 // Create a for loop to go through all the cities searched
 for (let i = 0; i < cityArray.length; i++) {
     const wrapper = document.createElement('div')
-    const cityN = document.createElement('h3')
+    const cityN = document.createElement('p')
     // Add text content to the new element created above
     cityN.textContent = cityArray[i].city
     // add styling to the new element

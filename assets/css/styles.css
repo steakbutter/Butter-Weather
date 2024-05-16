@@ -13,21 +13,33 @@
 
 .flexbox {
     display: inline-block;
-    margin-left: 1vh;
+    justify-content: center;
+    margin-left: 2vh;
 }
 
 #cityName {
-    width: 25vh;
+    width: 30vh;
     height: 3vh;
     text-align: center;
     margin-top: 1vh;
     border-radius: 15px;
 }
 #searchBtn {
-    width: 26vh;
+    width: 31vh;
     height: 3vh;
     text-align: center;
     background-color: rgb(255, 232, 127);
     color: black;
     border-radius: 25px;
+}
+.wrapperClass {
+    margin: 15px 5px;
+    font-size: large;
+
+}
+.cityClass {
+    background-color: rgba(128, 128, 128, 0.493);
+    text-align: center;
+    height: 25px;
+    border-radius: 5px;
 }
