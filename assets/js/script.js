@@ -27,7 +27,7 @@ searchBtn.addEventListener('click', function (event) {
         .then(function (data) {
             console.log(data);
         });
-    
+
         const cityContainer = document.querySelector('.cities');
 
         const wrapper = document.createElement('div')
@@ -43,37 +43,3 @@ searchBtn.addEventListener('click', function (event) {
         cityContainer.append(wrapper);
 })
 
-
-
-// Create a variable to act as the container for searched cities
-const cityContainer = document.querySelector('.cities');
-// TODO: Clear the buttons that already exist
-let oldCities = cityContainer.children;
-for (let i = 0; i < oldCities.length; i++) {
-    oldCities[i].remove();
-}
-
-
-// query data from the local storage
-const cityData = localStorage.getItem('city');
-if (!cityData) {
-    cityData = [];
-}
-
-//Convert sotred data to an easier datatype
-const cityArray = JSON.parse(cityData)
-
-// Create a for loop to go through all the cities searched
-for (let i = 0; i < cityArray.length; i++) {
-    const wrapper = document.createElement('div')
-    const cityN = document.createElement('p')
-    // Add text content to the new element created above
-    cityN.textContent = cityArray[i]
-    // add styling to the new element
-    wrapper.classList.add("wrapperClass");
-    cityN.classList.add("cityClass");
-    //Append new element to wrapper
-    wrapper.appendChild(cityN);
-    //Add new wrapper to the DOM
-    cityContainer.append(wrapper);
-}
