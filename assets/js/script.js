@@ -15,7 +15,7 @@ searchBtn.addEventListener('click', function (event) {
     searchHistory.push(userSearch)
     localStorage.setItem('city', JSON.stringify(searchHistory));
     let cities = cityName.value
-    const queryUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${APIKey}`;
+    const queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${APIKey}`;
 
     fetch(queryUrl, {
         method: 'GET',
@@ -42,4 +42,6 @@ searchBtn.addEventListener('click', function (event) {
         //Add new wrapper to the DOM
         cityContainer.append(wrapper);
 })
+
+// Need to get info fetched displayed to HTML
 
