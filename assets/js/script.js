@@ -25,12 +25,34 @@ searchBtn.addEventListener('click', function (event) {
             return response.json();
         })
         .then(function (data) {
+            //displayed all the information I need in the console log.
             console.log(data);
             console.log(data.name);
             console.log(data.main.temp);
             console.log(data.wind.speed);
             console.log(data.main.humidity);
-            //displayed all the information I need in the console log.
+            // displayed information to the HTML webpage
+            
+            const weatherCard = document.querySelector('.weather');
+            const cityCard = document.createElement('div');
+            const cityTitle = document.createElement('h3');
+            const cityTemp = document.createElement('p');
+            const cityWind = document.createElement('p');
+            const cityHumidity = document.createElement('p');
+
+            cityTitle.textContent = data.name;
+            cityTemp.textContent = data.main.temp;
+            cityWind.textContent = data.wind.speed;
+            cityHumidity.textContent = data.main.humidity;
+
+            cityCard.appendChild(cityTitle);
+            cityCard.appendChild(cityTemp);
+            cityCard.appendChild(cityWind);
+            cityCard.appendChild(cityHumidity);
+
+            weatherCard.append(cityCard);
+
+
         });
 
         const cityContainer = document.querySelector('.cities');
