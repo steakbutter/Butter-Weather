@@ -26,6 +26,11 @@ searchBtn.addEventListener('click', function (event) {
         })
         .then(function (data) {
             console.log(data);
+            console.log(data.name);
+            console.log(data.main.temp);
+            console.log(data.wind.speed);
+            console.log(data.main.humidity);
+            //displayed all the information I need in the console log.
         });
 
         const cityContainer = document.querySelector('.cities');
@@ -42,6 +47,5 @@ searchBtn.addEventListener('click', function (event) {
         //Add new wrapper to the DOM
         cityContainer.append(wrapper);
 })
-
 // Need to get info fetched displayed to HTML
 
