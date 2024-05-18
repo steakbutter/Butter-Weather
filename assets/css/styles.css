@@ -43,3 +43,17 @@
     height: 25px;
     border-radius: 5px;
 }
+
+.weather {
+    display: flex;
+    justify-content: right;
+    
+}
+.cityCard {
+    border: 2px solid black;
+    width: 30vh;
+    height: 10vh;
+    text-align: left;
+    
+    
+}

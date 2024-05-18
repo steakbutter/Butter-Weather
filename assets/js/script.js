@@ -32,7 +32,7 @@ searchBtn.addEventListener('click', function (event) {
             console.log(data.wind.speed);
             console.log(data.main.humidity);
             // displayed information to the HTML webpage
-            
+
             const weatherCard = document.querySelector('.weather');
             const cityCard = document.createElement('div');
             const cityTitle = document.createElement('h3');
@@ -44,6 +44,8 @@ searchBtn.addEventListener('click', function (event) {
             cityTemp.textContent = data.main.temp;
             cityWind.textContent = data.wind.speed;
             cityHumidity.textContent = data.main.humidity;
+            // Add styling to text content
+            cityCard.classList.add("cityCard")
 
             cityCard.appendChild(cityTitle);
             cityCard.appendChild(cityTemp);
