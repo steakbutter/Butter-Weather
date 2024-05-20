@@ -4,15 +4,19 @@
 }
 
 #header {
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgb(81, 243, 243);
     text-align: center;
     margin: 5px 5px 5px 5px;
-    height: 5vh;
+    height: 7vh;
     
 }
 
 .flexbox {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: 2vh;
 }
@@ -50,9 +54,10 @@
     
 }
 .cityCard {
+    
     border: 2px solid black;
     width: 30vh;
-    height: 10vh;
+    height: 17vh;
     text-align: left;
     
     
