@@ -55,7 +55,8 @@
     
 }
 .cityCard {
-    
+    border-radius: 15px;
+    background-color: rgba(237, 186, 98, 0.947);
     border: 2px solid black;
     width: 60vh;
     height: 25vh;

@@ -75,5 +75,5 @@ searchBtn.addEventListener('click', function (event) {
         //Add new wrapper to the DOM
         cityContainer.append(wrapper);
 })
-// Need to get info fetched displayed to HTML
+
 
