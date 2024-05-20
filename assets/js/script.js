@@ -40,7 +40,7 @@ searchBtn.addEventListener('click', function (event) {
             const cityWind = document.createElement('p');
             const cityHumidity = document.createElement('p');
 
-            cityTitle.textContent = data.name + '    '+ Date();
+            cityTitle.textContent = data.name + '    '+ Date() ;
             cityTemp.textContent = 'Temp:  ' + data.main.temp + ' °F';
             cityWind.textContent = 'Wind:  ' + data.wind.speed + ' MPH';
             cityHumidity.textContent = 'Humidity:  ' + data.main.humidity + ' %';
