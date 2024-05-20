@@ -1,5 +1,5 @@
 // This is the API key created by open weather API
-const APIKey = "34b0949fb0fbf965fbefa03f231d3872";
+const APIKey = "bfc879ac74abb3d5f760b57caab298a7";
 
 // I want to get user input from the search city bar
 let searchBtn = document.getElementById('searchBtn');
@@ -15,7 +15,7 @@ searchBtn.addEventListener('click', function (event) {
     searchHistory.push(userSearch)
     localStorage.setItem('city', JSON.stringify(searchHistory));
     let cities = cityName.value
-    const queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${APIKey}`;
+    const queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${APIKey}&units=metric`;
 
     fetch(queryUrl, {
         method: 'GET',
