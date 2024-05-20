@@ -15,7 +15,7 @@ searchBtn.addEventListener('click', function (event) {
     searchHistory.push(userSearch)
     localStorage.setItem('city', JSON.stringify(searchHistory));
     let cities = cityName.value
-    const queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${APIKey}&units=metric`;
+    const queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${APIKey}&units=imperial`;
 
     fetch(queryUrl, {
         method: 'GET',
@@ -40,10 +40,10 @@ searchBtn.addEventListener('click', function (event) {
             const cityWind = document.createElement('p');
             const cityHumidity = document.createElement('p');
 
-            cityTitle.textContent = data.name;
-            cityTemp.textContent = data.main.temp;
-            cityWind.textContent = data.wind.speed;
-            cityHumidity.textContent = data.main.humidity;
+            cityTitle.textContent = data.name + '    '+ Date();
+            cityTemp.textContent = 'Temp:  ' + data.main.temp + ' °F';
+            cityWind.textContent = 'Wind:  ' + data.wind.speed + ' MPH';
+            cityHumidity.textContent = 'Humidity:  ' + data.main.humidity + ' %';
             // Add styling to text content
             cityCard.classList.add("cityCard")
 

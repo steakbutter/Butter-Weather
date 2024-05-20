@@ -50,14 +50,15 @@
 
 .weather {
     display: flex;
+    flex-direction: column;
     justify-content: right;
     
 }
 .cityCard {
     
     border: 2px solid black;
-    width: 30vh;
-    height: 17vh;
+    width: 60vh;
+    height: 25vh;
     text-align: left;
     
     
