@@ -58,8 +58,12 @@
     
     border: 2px solid black;
     width: 60vh;
-    height: 20vh;
+    height: 25vh;
     text-align: center;
     
     
+}
+.cityTitle {
+    margin-bottom: 10px;
+
 }

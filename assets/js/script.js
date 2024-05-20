@@ -46,6 +46,10 @@ searchBtn.addEventListener('click', function (event) {
             cityHumidity.textContent = 'Humidity:  ' + data.main.humidity + ' %';
             // Add styling to text content
             cityCard.classList.add("cityCard")
+            cityTitle.classList.add("cityTitle")
+            cityTemp.classList.add("cityTitle")
+            cityWind.classList.add("cityTitle")
+            cityHumidity.classList.add("cityTitle")
 
             cityCard.appendChild(cityTitle);
             cityCard.appendChild(cityTemp);
